@@ -1,12 +1,13 @@
 <template>
   <div>
-    <tree :tree-data="tree"></tree>
+    <tree v-show="false" :tree-data="tree"></tree>
 
     <h2>Table:</h2>
-    <Board :original-depth="99"></Board>
+    <Board :original-depth="depth"></Board>
 
     <div></div>
-    <Slider></Slider>
+    <Slider v-model="depth"></Slider>
+    <span>Nesting depth: {{depth}}</span>
 
   </div>
 
@@ -20,6 +21,7 @@
   export default {
     data()  {
       return {
+        depth: 50,
         tree: {
           label: "A cool folder",
           children: [

@@ -19,7 +19,7 @@
 <style scoped>
     table {
         border: 1px solid black;
-        width: 20vw;
-        height: 20vw
+        width: 10vw;
+        height: 10vw
     }
 </style>
